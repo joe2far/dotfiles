@@ -57,9 +57,9 @@ fi
 
 parse_git_dirty () {
   if [[ $(git status 2> /dev/null | tail -n1 | cut -c 1-17) != "nothing to commit" ]]; then
-    echo "✗"
+    echo " ✗"
   else
-    echo "✓"
+    echo " ✓"
   fi
 }
 parse_git_branch () {
