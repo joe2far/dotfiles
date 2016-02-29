@@ -13,6 +13,7 @@ old_dotfiles_dir=~/dotfiles_old       # old dotfiles backup directory
 dotfiles=(
 'bashrc'
 'bash_profile'
+'inputrc'
 
 'bash_aliases'
 'bash_exports'
