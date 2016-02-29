@@ -117,7 +117,7 @@ if ! [ -f /.dockerinit ]; then
     alias dk-lc-ip="docker inspect ${dk-lc-id} | grep IPAddress | cut -d '\"' -f 4"  # Get IP of last Docker container
     alias dk-ps='docker ps'           # List running Docker containers
     alias dk-psa='docker ps -a'       # List all Docker containers
-    alias dk-imagei='docker images'   # List Docker images
+    alias dk-images='docker images'   # List Docker images
 fi
 
 ### PYTHON ###
