@@ -1,0 +1,14 @@
+# Set my editor and git editor
+export EDITOR="vim"
+export GIT_EDITOR='vim'
+
+# Set my WORCKSPACE
+WORKSPACE=~/workspace
+
+# MAVEN
+export M2_HOME=/usr/local/apache-maven/apache-maven-3.0.5
+export M2=$M2_HOME/bin
+export PATH=$PATH:$M2
+
+# GSUTIL
+export PATH=${PATH}:$HOME/gsutil
