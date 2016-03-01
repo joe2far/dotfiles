@@ -6,7 +6,7 @@
 
 ### Variables ###
 
-dotfiles_dir=~/dotfiles               # dotfiles directory
+dotfiles_dir=./dotfiles               # dotfiles directory
 old_dotfiles_dir=~/dotfiles_old       # old dotfiles backup directory
 
 # List of files/folders to symlink in home directory
@@ -42,7 +42,7 @@ for dotfile in ${dotfiles[@]}; do
 
     # Create symlink for dotfile in home directory
     echo "# Creating symlink for $dotfile in home directory"
-    ln -fs $dotfiles_dir/$dotfile ~/.$dotfile
+    ln -fs $source_dotfile $target_dotfile
     echo "...done"
 done
 
