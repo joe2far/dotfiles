@@ -112,12 +112,19 @@ alias review='git push origin HEAD:refs/for/master' # Gerrit review
 
 ### DOCKER ###
 if ! [ -f /.dockerinit ]; then
+    alias docker='sudo docker'
     alias dk-lc='docker ps -l'       # List last Docker container
     alias dk-lc-id='docker ps -l -q' # List last Docker container ID
-    alias dk-lc-ip="docker inspect ${dk-lc-id} | grep IPAddress | cut -d '\"' -f 4"  # Get IP of last Docker container
-    alias dk-ps='sudo docker ps'           # List running Docker containers
-    alias dk-psa='sudo docker ps -a'       # List all Docker containers
-    alias dk-images='sudo docker images'   # List Docker images
+    # Get Docker container IP
+    alias dk-ip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+    # Get IP of last Docker container
+    alias dk-lc-ip="docker inspect ${dk-lc-id} | grep IPAddress | cut -d '\"' -f 4"
+    alias dk-ps='docker ps'           # List running Docker containers
+    alias dk-psa=' docker ps -a'      # List all Docker containers
+    alias dk-images='docker images'   # List Docker images
+    alias dk-rmi='docker rmi'         # Remove Docker image
+    # Remve all Dcoker containers
+    alias dk-rm-all-conts="sudo docker ps -a | awk '{print $1}' | grep -v CONT | xargs docker rm -f"
 fi
 
 ### PYTHON ###
