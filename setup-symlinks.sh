@@ -14,6 +14,7 @@ dotfiles=(
 'bashrc'
 'bash_profile'
 'inputrc'
+'vimrc'
 
 'bash_aliases'
 'bash_exports'
