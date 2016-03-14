@@ -92,7 +92,7 @@ alias gm="git merge"
 alias gms="git merge --squash"
 alias gmerged='git branch --merged | grep -v master'
 alias gpatch-create="git format-patch -1"
-alias gpatch-apply="git apply --check"
+alias gpatch-apply="git apply"
 function gclone_workspace(){
   cd ${WORKSPACE}
   gclone $1
