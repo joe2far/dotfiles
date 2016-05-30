@@ -12,3 +12,7 @@ export PATH=$PATH:$M2
 
 # GSUTIL
 export PATH=${PATH}:$HOME/gsutil
+
+# GOPATH
+export GOPATH=$WORKSPACE/go
+export PATH=$PATH:$GOPATH/bin
