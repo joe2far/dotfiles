@@ -86,6 +86,7 @@ alias gti='git'
 alias gundo='git reset --soft HEAD^'
 alias gup='git fetch && git rebase'
 alias gf="git fetch"
+alias gfu="git fetch upstream"
 alias grh="git reset --hard origin/master"
 alias glo="git pull origin"
 alias gm="git merge"
