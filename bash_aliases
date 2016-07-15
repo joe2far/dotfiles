@@ -124,8 +124,9 @@ if ! [ -f /.dockerinit ]; then
     alias dk-psa=' docker ps -a'      # List all Docker containers
     alias dk-images='docker images'   # List Docker images
     alias dk-rmi='docker rmi'         # Remove Docker image
-    # Remve all Dcoker containers
-    alias dk-rm-all-conts="sudo docker ps -a | awk '{print $1}' | grep -v CONT | xargs docker rm -f"
+    alias dk-rm-all-images="sudo docker images | grep \"<none>\" | awk '{print \$3}' | xargs sudo docker rmi"
+    # Remove all Docker containers
+    alias dk-rm-all-conts="sudo docker ps -a | awk '{print \$1}' | grep -v CONT | xargs --no-run-if-empty sudo docker rm -f"
 fi
 
 ### PYTHON ###
