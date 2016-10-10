@@ -117,10 +117,13 @@ if ! [ -f /.dockerinit ]; then
     alias docker='sudo docker'
     alias dk-lc='docker ps -l'       # List last Docker container
     alias dk-lc-id='docker ps -l -q' # List last Docker container ID
+    alias dk-kill='docker kill'
     # Get Docker container IP
     alias dk-ip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
     # Get IP of last Docker container
     alias dk-lc-ip="docker inspect ${dk-lc-id} | grep IPAddress | cut -d '\"' -f 4"
+    # Kill last Docker container
+    alias dk-kill-lc="docker ps -l -q | xargs sudo docker kill"
     alias dk-ps='docker ps'           # List running Docker containers
     alias dk-psa=' docker ps -a'      # List all Docker containers
     alias dk-images='docker images'   # List Docker images
