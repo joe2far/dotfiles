@@ -137,6 +137,7 @@ fi
 alias py="python"
 alias ipy="ipython"
 alias grepy="find . -type f -iname '*.py' | grep -v target | xargs grep -TnZ"
+alias gogrep="find . -type f -iname '*.go' | xargs grep -TnZ"
 alias nose-trace="echo 'from nose.tools import set_trace; set_trace()'"
 alias pdb="echo 'import pdb; pdb.set_trace()'"
 alias ipdb="echo 'import ipdb; ipdb.set_trace()'"
