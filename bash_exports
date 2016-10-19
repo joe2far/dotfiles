@@ -17,3 +17,6 @@ export PATH=${PATH}:$HOME/gsutil
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$WORKSPACE/go
 export PATH=$PATH:$GOPATH/bin
+
+# Kubernetes
+K8S="--namespace=kube-system"
