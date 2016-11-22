@@ -114,7 +114,7 @@ alias review='git push origin HEAD:refs/for/master' # Gerrit review
 
 ### DOCKER ###
 if ! [ -f /.dockerinit ]; then
-    alias docker='sudo docker'
+    alias docker='docker'
     alias dk-lc='docker ps -l'       # List last Docker container
     alias dk-lc-id='docker ps -l -q' # List last Docker container ID
     alias dk-kill='docker kill'
@@ -132,6 +132,10 @@ if ! [ -f /.dockerinit ]; then
     # Remove all Docker containers
     alias dk-rm-all-conts="sudo docker ps -a | awk '{print \$1}' | grep -v CONT | xargs --no-run-if-empty sudo docker rm -f"
 fi
+
+### KUBERNETES ###
+alias kc="kubectl"
+alias kcs="kubectl --namespace='kube-system'"
 
 ### PYTHON ###
 alias py="python"
