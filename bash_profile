@@ -19,7 +19,7 @@ unset bash_files
 unset bash_file
 
 
-### HISTORY ### 
+### HISTORY ###
 export HISTCONTROL=ignoredups:erasedups         # no duplicate entries
 export HISTSIZE=100000                          # big big history (default is 500)
 export HISTFILESIZE=$HISTSIZE                   # big big history
