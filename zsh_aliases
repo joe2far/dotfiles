@@ -1,17 +1,18 @@
 ### Aliases ###
 
 ### General ####
-alias s='source ~/.bashrc'              # source .bashrc
+alias s='source ~/.zshrc'               # source .zshrc
 alias _="sudo"                          # sudo shortcut
 alias suod='sudo'                       # sudo typo
 alias sl='ls'                           # ls typo
-alias l='ls'                            # various 'ls' shortcuts 
-alias la='ls -lia'                      
-alias ll='ls -lrt'                      
-alias l1='ls -1'                        
-alias c='clear'                         # clear  
-alias q='exit'                          # exit 
-alias .='nautilus . &'                  # open files
+alias l='ls'                            # various 'ls' shortcuts
+alias la='ls -lia'
+alias ll='ls -lrt'
+alias l1='ls -1'
+alias c='clear'                         # clear
+alias q='exit'                          # exit
+# alias .='nautilus . &'                  # open files
+alias o='open .'                        # open finder
 alias ..='cd ..'                        # various 'cd' shortcuts
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -24,7 +25,6 @@ alias h='history'                        # history
 hu(){
   history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | less
 }
-
 hu2(){
   history | awk '{CMD[$2"_"$3"_"$4]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | less
 }
@@ -74,6 +74,8 @@ alias get='git'
 alias gexport='git archive --format zip --output'
 alias gl='git pull'
 alias gll='git log --graph --abbrev-commit'
+alias gll='git log --graph --abbrev-commit'
+alias gllp='git log --graph --abbrev-commit -p'
 alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
 alias gup='git fetch upstream && git rebase upstream/master'
 alias gp='git push'
@@ -99,14 +101,18 @@ function gclone_workspace(){
   cd ${WORKSPACE}
   gclone $1
 }
+alias gr="git-recursive"
 function git-recursive(){
-  cd ${WORKSPACE}
   for i in $(ls -d */); do
     echo $i
     cd $i
     git $1
     cd ..
   done
+}
+function gdel-all(){
+ git push origin --delete $1
+ git branch -D $1
 }
 
 ### GERRIT ###
@@ -140,8 +146,8 @@ alias kcs="kubectl --namespace='kube-system'"
 ### PYTHON ###
 alias py="python"
 alias ipy="ipython"
-alias grepy="find . -type f -iname '*.py' | grep -v target | xargs grep -TnZ"
-alias gogrep="find . -type f -iname '*.go' | xargs grep -TnZ"
+alias grepy="find . -type f -iname '*.py' | grep -v target | xargs grep -nZ"
+alias gogrep="find . -type f -iname '*.go' | grep -v vendor | xargs grep -nZ"
 alias nose-trace="echo 'from nose.tools import set_trace; set_trace()'"
 alias pdb="echo 'import pdb; pdb.set_trace()'"
 alias ipdb="echo 'import ipdb; ipdb.set_trace()'"

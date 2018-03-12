@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# List of zsh files to source
+zsh_files=(
+"$HOME/.zsh_extras"
+"$HOME/.zsh_aliases"
+"$HOME/.zsh_exports"
+)
+
+# Source zsh dotfiles
+for zsh_file in ${zsh_files[@]}; do
+    if [ -f "$zsh_file" ]; then
+        source "$zsh_file"
+    fi
+done
+unset zsh_files
+unset zsh_file
+
+### HISTORY ###
+export HISTCONTROL=ignoredups:erasedups         # no duplicate entries
+export HISTSIZE=100000                          # big big history (default is 500)
+export HISTFILESIZE=$HISTSIZE                   # big big history

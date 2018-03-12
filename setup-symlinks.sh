@@ -11,15 +11,13 @@ old_dotfiles_dir=~/dotfiles_old       # old dotfiles backup directory
 
 # List of files/folders to symlink in home directory
 dotfiles=(
-'bashrc'
-'bash_profile'
+'zshrc'
+'zsh_profile'
 'inputrc'
 'vimrc'
 
-'bash_aliases'
-'bash_exports'
-'bash_functions'
-'bash_prompt'
+'zsh_aliases'
+'zsh_exports'
 )
 
 # Create dotfiles_old in home directory
@@ -48,12 +46,12 @@ for dotfile in ${dotfiles[@]}; do
 done
 
 # Unset variables
-unset dotfiles_dir 
+unset dotfiles_dir
 unset old_dotfiles_dir
 unset dotfiles
 unset dotfile
 unset source_dotfile
 unset target_dotfile
 
-# Source updated ~/.bashrc dotfile
-source ~/.bashrc
+# Source updated ~/.zshrc dotfile
+source ~/.zshrc
