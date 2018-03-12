@@ -1,7 +1,2 @@
 # Disable bell sound in console
 set bell-style none
-
-# Enable page-up / page-down history search
-"\e[5~": history-search-backward
-"\e[6~": history-search-forward
-

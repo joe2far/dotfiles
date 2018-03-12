@@ -64,6 +64,7 @@ plugins=(
   go
   thefuck
   tmux
+  history-substring-search
   z
 )
 
@@ -98,4 +99,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
- source ~/.zsh_profile
+source ~/.zsh_profile
