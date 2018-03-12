@@ -45,12 +45,10 @@ alias vime='vim src/*extension/*extension.py'
 alias vimp='vim src/*plugin/*plugin.py'
 alias vimt='vim $(find test/ -name test*.py)'
 alias vim-ssh-hosts='vim ~/.ssh/known_hosts'
-alias vim-bashrc='vim ~/.bashrc'
-alias vim-bash-profile='vim ~/.bash_profile'
-alias vim-bash-prompt='vim ~/.bash_prompt'
-alias vim-bash-aliases='vim ~/.bash_aliases'
-alias vim-bash-functions='vim ~/.bash_functions'
-alias vim-bash-exports='vim ~/.bash_exports'
+alias vim-zshrc='vim ~/.zshrc'
+alias vim-zsh-profile='vim ~/.zsh_profile'
+alias vim-zsh-aliases='vim ~/.zsh_aliases'
+alias vim-zsh-exports='vim ~/.zsh_exports'
 
 
 ### GIT ###
