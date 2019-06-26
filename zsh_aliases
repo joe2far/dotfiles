@@ -38,6 +38,14 @@ alias where='which'                      # common mistake
 alias path='echo $PATH | tr -s ":" "\n"' # pretty print the PATH
 alias hosts='sudo vim /etc/hosts'        # open hosts
 
+
+### TMUX ###
+alias tmus='tmux'
+alias tm='tmux'
+alias tm-ls='tmux ls'
+alias tm-a='tmux a -t'
+alias tm-new='tmux new -s'
+
 ### VIM ###
 alias v='vim'
 alias vi='vim'
@@ -88,6 +96,8 @@ alias gundo='git reset --soft HEAD^'
 alias gf="git fetch"
 alias gfu="git fetch upstream"
 alias grh="git reset --hard origin/master"
+alias grh-qa="git reset --hard origin/qa"
+alias grh-dev="git reset --hard origin/dev"
 alias glo="git pull origin"
 alias gm="git merge"
 alias gms="git merge --squash"
@@ -104,7 +114,7 @@ function git-recursive(){
   for i in $(ls -d */); do
     echo $i
     cd $i
-    git $1
+    git $@
     cd ..
   done
 }
@@ -180,3 +190,11 @@ alias mrrb='mvn release:rollback'
 alias mdep='mvn dependency:tree'
 alias mpom='mvn help:effective-pom'
 alias mcisk='mci -Dmaven.test.skip=true'
+
+# Add Visual Studio Code (code)
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+
+# JSON / YAML aliases
+# pip install yq (jq wrapper for yaml)
+alias yaml2json="yq . "
+alias json2yaml="yq -y . "
