@@ -100,3 +100,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.zsh_profile
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jjf001m/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jjf001m/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jjf001m/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jjf001m/google-cloud-sdk/completion.zsh.inc'; fi
+if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+# add direnv
+eval "$(direnv hook zsh)"
+#sledge:binary path
+export SLEDGE_BIN=/Users/jjf001m/.sledge/bin
+export PATH="${PATH}:${SLEDGE_BIN}"

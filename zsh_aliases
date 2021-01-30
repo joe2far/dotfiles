@@ -105,10 +105,6 @@ alias gresetauthor='git commit --amend --reset-author'
 alias gmerged='git branch --merged | grep -v master'
 alias gpatch-create="git format-patch -1"
 alias gpatch-apply="git apply"
-function gclone_workspace(){
-  cd ${WORKSPACE}
-  gclone $1
-}
 alias gr="git-recursive"
 function git-recursive(){
   for i in $(ls -d */); do
@@ -197,4 +193,4 @@ alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/co
 # JSON / YAML aliases
 # pip install yq (jq wrapper for yaml)
 alias yaml2json="yq . "
-alias json2yaml="yq -y . "
+alias json2yaml="yq r -j . "
