@@ -4,7 +4,7 @@
 alias s='source ~/.zshrc'               # source .zshrc
 alias _="sudo"                          # sudo shortcut
 alias suod='sudo'                       # sudo typo
-alais mkae='make'                       # make typo
+alias mkae='make'                       # make typo
 alias sl='ls'                           # ls typo
 alias l='ls'                            # various 'ls' shortcuts
 alias la='ls -lia'

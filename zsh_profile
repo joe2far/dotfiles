@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Add homebrew bin
+export PATH=/opt/homebrew/bin:$PATH
+
 # List of zsh files to source
 zsh_files=(
 "$HOME/.zsh_extras"

@@ -109,7 +109,7 @@ if [ -f '/Users/jjf001m/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/j
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
 # add direnv
-eval "$(direnv hook zsh)"
+#eval "$(direnv hook zsh)"
 #sledge:binary path
 export SLEDGE_BIN=/Users/jjf001m/.sledge/bin
 export PATH="${PATH}:${SLEDGE_BIN}"
