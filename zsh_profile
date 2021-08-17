@@ -8,6 +8,9 @@ zsh_files=(
 "$HOME/.zsh_extras"
 "$HOME/.zsh_aliases"
 "$HOME/.zsh_exports"
+"$HOME/.zsh_litp"
+"$HOME/.zsh_extras"
+"$HOME/.zsh_jet"
 )
 
 # Source zsh dotfiles

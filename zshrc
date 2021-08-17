@@ -61,7 +61,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   brew
   git
-  go
+  golang
   thefuck
   tmux
   history-substring-search
